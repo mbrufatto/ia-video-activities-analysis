@@ -27,8 +27,6 @@ Você deverá criar uma aplicação a partir do vídeo que se encontra disponív
 ● Total de frames analisados.
 ● Número de anomalias detectadas.
 
-```
-Observação: movimento anômalo não segue o padrão geral de atividades (como gestos bruscos ou comportamentos atípicos) esses são classificados como anômalos.
-```
+> Observação: movimento anômalo não segue o padrão geral de atividades (como gestos bruscos ou comportamentos atípicos) esses são classificados como anômalos.
 
 3. Demonstração em Vídeo: um vídeo demonstrando a aplicação em funcionamento, evidenciando cada uma das funcionalidades implementadas.
