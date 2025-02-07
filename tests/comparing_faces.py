@@ -1,3 +1,7 @@
+#################################################################################################
+# Compara rostos e verifica se são da mesma pessoa
+#################################################################################################
+
 import os
 
 from deepface import DeepFace
@@ -31,15 +35,15 @@ def compare_faces(image1, image2):
 
 
 if __name__ == "__main__":
-    image1 = "person_1.jpg"
-    image2 = "person_2.jpg"
-    image3 = "person_3.jpg"
-    image4 = "person_4.jpg"
-    image5 = "person_5.jpg"
-    image6 = "person_6.jpg"
-    image7 = "person_7.jpg"
-    image8 = "person_8.jpg"
-    image9 = "person_9.jpg"
+    image1 = "compare_person/person_1.jpg"
+    image2 = "compare_person/person_2.jpg"
+    image3 = "compare_person/person_3.jpg"
+    image4 = "compare_person/person_4.jpg"
+    image5 = "compare_person/person_5.jpg"
+    image6 = "compare_person/person_6.jpg"
+    image7 = "compare_person/person_7.jpg"
+    image8 = "compare_person/person_8.jpg"
+    image9 = "compare_person/person_9.jpg"
 
     compare_faces(image1, image2)
     compare_faces(image1, image3)
