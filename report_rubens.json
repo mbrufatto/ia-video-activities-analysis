@@ -1,0 +1,19 @@
+{
+    "total_frames": 3326,
+    "faces_detected": 333,
+    "emotions_analyzed": 424,
+    "unique_emotions": [
+        "fear",
+        "sad",
+        "neutral",
+        "happy",
+        "angry",
+        "surprise"
+    ],
+    "activities_detected": 554,
+    "unique_activities": [
+        "atividade_gen\u00e9rica"
+    ],
+    "anomalies_detected": 0,
+    "frames_with_anomalies": []
+}
