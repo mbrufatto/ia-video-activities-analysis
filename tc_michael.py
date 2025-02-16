@@ -75,35 +75,35 @@ def detect_faces_video(video_path, output_path):
         # Analisar o frame para detectar faces e emoções
         # result = DeepFace.analyze(frame, actions=["emotion"], enforce_detection=False)
 
-        try:
-            result = DeepFace.analyze(
-                frame, actions=["emotion"], enforce_detection=True
-            )
-        except:
-            result = []
+        # try:
+        #     result = DeepFace.analyze(
+        #         frame, actions=["emotion"], enforce_detection=True
+        #     )
+        # except:
+        #     result = []
 
-        for face in result:
-            x, y, w, h = (
-                face["region"]["x"],
-                face["region"]["y"],
-                face["region"]["w"],
-                face["region"]["h"],
-            )
-            emotion = face["dominant_emotion"]
+        # for face in result:
+        #     x, y, w, h = (
+        #         face["region"]["x"],
+        #         face["region"]["y"],
+        #         face["region"]["w"],
+        #         face["region"]["h"],
+        #     )
+        #     emotion = face["dominant_emotion"]
 
-            # Para não desenhar o retângulo na borda do frame
-            # if (w != frame_height-1 and h != frame_height-1):
-            #     cv2.rectangle(frame, (x, y), (x + w, y + h), (10, 10, 255), 2)
-            if emotion != "neutral":
-                cv2.putText(
-                    frame,
-                    emotion,
-                    (x, y - 10),
-                    cv2.FONT_HERSHEY_SIMPLEX,
-                    0.9,
-                    (10, 10, 250),
-                    2,
-                )
+        #     # Para não desenhar o retângulo na borda do frame
+        #     # if (w != frame_height-1 and h != frame_height-1):
+        #     #     cv2.rectangle(frame, (x, y), (x + w, y + h), (10, 10, 255), 2)
+        #     if emotion != "neutral":
+        #         cv2.putText(
+        #             frame,
+        #             emotion,
+        #             (x, y - 10),
+        #             cv2.FONT_HERSHEY_SIMPLEX,
+        #             0.9,
+        #             (10, 10, 250),
+        #             2,
+        #         )
 
         # Escrever o frame processado no vídeo de saída
         out.write(frame)
@@ -115,4 +115,6 @@ def detect_faces_video(video_path, output_path):
 
 
 # Exemplo de uso
-detect_faces_video("input_full.mp4", "resultado.mp4")
+detect_faces_video(
+    "tests/input_shorter.mp4", "resultado_retinaface_michael_shorter.mp4"
+)
